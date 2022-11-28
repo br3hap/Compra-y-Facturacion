@@ -5,7 +5,7 @@ from .models import Categoria
 class CategoriaForm(forms.ModelForm):
     class Meta:
         model =  Categoria
-        fields = ['descripcion','esatdo']
+        fields = ['descripcion','estado']
         labels = {'descripcion':'Descripcion de la Categoria',
                     'estado':'Estado'}
         widget = {'descripcion':forms.TextInput}
