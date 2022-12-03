@@ -75,6 +75,7 @@ class Producto(ClaseModelo):
     marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
     unidad_medida = models.ForeignKey(UnidadMedida, on_delete=models.CASCADE)
     subcategoria = models.ForeignKey(SubCategoria, on_delete=models.CASCADE)
+    descripcion = models.CharField(max_length = 100, help_text="Descripcion del Producto", unique = True)
 
     def __str__(self):
         return '{}'.format(self.descripcion)
